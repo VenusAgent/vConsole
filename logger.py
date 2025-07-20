@@ -17,7 +17,7 @@ class BaseConsole(Console):
         super().__init__(*args, **kwargs)
         self.fmt = "[bold green]{loglevel}[/]:     {message}"
 
-    def logger(self, loglevel: Literal['INFO', 'WARN'] = 'INFO', *, message: str | None = None, color: str = 'green', bold: bool = True):
+    def logger(self, loglevel: Literal['INFO', 'WARN', 'KILL'] = 'INFO', *, message: str | None = None, color: str = 'green', bold: bool = True):
         """
         Log a message with the specified log level, color, and bold formatting.
         """
